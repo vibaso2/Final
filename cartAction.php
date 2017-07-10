@@ -9,7 +9,6 @@ if(isset($_REQUEST['action']) && !empty($_REQUEST['action'])){
     if($_REQUEST['action'] == 'addToCart' && !empty($_REQUEST['id'])){
         $productID = $_REQUEST['id'];
         $productID = (string)$productID;
-
         $query = $db->query("SELECT * FROM products WHERE id = .$productID );
         $row = $query->fetch_assoc();
         $itemData = array(
